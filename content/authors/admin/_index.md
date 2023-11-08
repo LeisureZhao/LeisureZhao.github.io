@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 吳健雄
+title: 赵磊
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: zhaolei
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Leisure
+last_name: Zhao
 
 # Status emoji
 status:
@@ -17,11 +17,11 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Professor of Artificial Intelligence
+role: Software Development Engineer
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Stanford University
+  - name: Inspur
     url: https://www.stanford.edu/
 
 # Short bio (displayed in user profile at end of posts)
