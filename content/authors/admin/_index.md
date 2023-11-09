@@ -1,9 +1,9 @@
 ---
 # Display name
-title: 赵磊
+title: 我 们
 
 # Name pronunciation (optional)
-name_pronunciation: zhaolei
+name_pronunciation: wo men
 
 # Full name (for SEO)
 first_name: Leisure
@@ -11,21 +11,21 @@ last_name: Zhao
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: 👫
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: Software Development Engineer
+role: 
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Inspur
-    url: https://www.stanford.edu/
+  - name: 济南经十路
+    url: https://baike.baidu.com/item/%E7%BB%8F%E5%8D%81%E8%B7%AF/6469745
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: 愿得一人心 白首不分离
 
 # Social Networking
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -39,7 +39,7 @@ social:
     label: Follow me on Twitter
   - icon: github
     icon_pack: wc
-    link: https://github.com/gcushen
+    link: https://github.com/LeisureZhao
   - icon: linkedin
     icon_pack: wc
     link: https://www.linkedin.com/
@@ -55,7 +55,5 @@ social:
 highlight_name: true
 ---
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include
-distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops
-self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-{style="text-align: justify; font-size: 0.8em;"}
+宋词婉约情深深，晓风拂面雨濛濛。
+倩影摇曳心相随，情意缱绻永不泯。
