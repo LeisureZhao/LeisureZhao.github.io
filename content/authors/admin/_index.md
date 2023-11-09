@@ -21,8 +21,8 @@ role:
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: 济南经十路附近
-    url: https://baike.baidu.com/item/%E7%BB%8F%E5%8D%81%E8%B7%AF/6469745
+  - name: 😃 😀 💕 🤗 😊
+    url: https://emojifinder.com
 
 # Short bio (displayed in user profile at end of posts)
 bio: 愿得一人心 白首不分离
