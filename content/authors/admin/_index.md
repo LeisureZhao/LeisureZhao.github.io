@@ -21,7 +21,7 @@ role:
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: 😃 😀 💕 🤗 😊
+  - name: 😀 🤗 💕 😄 😜
     url: https://emojifinder.com
 
 # Short bio (displayed in user profile at end of posts)
