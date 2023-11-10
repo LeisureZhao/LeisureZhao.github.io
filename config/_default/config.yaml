@@ -42,6 +42,7 @@ module:
   imports:
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify
     - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind
+    - path: github.com/LeisureZhao/wowchemy-shortcode-v1
 
 ############################
 ## ADVANCED
