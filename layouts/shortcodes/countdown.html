@@ -1,7 +1,9 @@
-<div id="countdown"></div>
+<div id="countdown1"></div>
+<div id="countdown2"></div>
+<div id="countdown3"></div>
 
 <script>
-function updateCountdown(targetDate, event) {
+function updateCountdown(targetDate, event, countdownElement) {
   var currentDate = new Date();
   var diff = currentDate - targetDate;
 
@@ -10,19 +12,26 @@ function updateCountdown(targetDate, event) {
   var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  var countdownElement = document.getElementById("countdown");
-  countdownElement.innerHTML = "距离" + event + " " + "时候已经过去 " + days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒";
+  countdownElement.innerHTML = "距离" + " " + event + " " + "时候已经过去 " + days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒";
 
   setTimeout(function() {
-    updateCountdown(targetDate, event);
+    updateCountdown(targetDate, event, countdownElement);
   }, 1000);
 }
 
 // 从页面参数获取目标日期和已经过去的时间
-var targetDateString = "{{ .Params.targetDate }}";
-var targetDate = new Date(targetDateString);
-var event = "{{ .Params.event }}";
+var targetDate1 = new Date("{{ .Params.targetDate1 }}");
+var event1 = "{{ .Params.event1 }}";
+var countdownElement1 = document.getElementById("countdown1");
+updateCountdown(targetDate1, event1, countdownElement1);
 
-// 调用倒计时更新函数
-updateCountdown(targetDate, event);
+var targetDate2 = new Date("{{ .Params.targetDate2 }}");
+var event2 = "{{ .Params.event2 }}";
+var countdownElement2 = document.getElementById("countdown2");
+updateCountdown(targetDate2, event2, countdownElement2);
+
+var targetDate3 = new Date("{{ .Params.targetDate3 }}");
+var event3 = "{{ .Params.event3 }}";
+var countdownElement3 = document.getElementById("countdown3");
+updateCountdown(targetDate3, event3, countdownElement3);
 </script>
