@@ -1,0 +1,28 @@
+<div id="countdown"></div>
+
+<script>
+function updateCountdown(targetDate, event) {
+  var currentDate = new Date();
+  var diff = currentDate - targetDate;
+
+  var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  var countdownElement = document.getElementById("countdown");
+  countdownElement.innerHTML = "距离" + " " + event + " " + "时候已经过去 " + days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒";
+
+  setTimeout(function() {
+    updateCountdown(targetDate, event);
+  }, 1000);
+}
+
+// 从页面参数获取目标日期和已经过去的时间
+var targetDateString = "{{ .Params.targetDate }}";
+var targetDate = new Date(targetDateString);
+var event = "{{ .Params.event }}";
+
+// 调用倒计时更新函数
+updateCountdown(targetDate, event);
+</script>
