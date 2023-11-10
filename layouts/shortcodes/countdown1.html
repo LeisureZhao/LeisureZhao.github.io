@@ -11,7 +11,7 @@ function updatecountdown1(targetDate, event) {
   var seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
   var countdown1Element = document.getElementById("countdown1");
-  countdown1Element.innerHTML = "距离" + " " + event + " " + "时候已经过去 " + days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒";
+  countdown1Element.innerHTML = "距离" + " <span style='color: red;'>" + event + "</span> " + "时候已经过去 " + days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒";
 
   setTimeout(function() {
     updatecountdown1(targetDate, event);

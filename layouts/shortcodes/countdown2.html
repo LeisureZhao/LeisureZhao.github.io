@@ -1,7 +1,7 @@
-<div id="countdown"></div>
+<div id="countdown2"></div>
 
 <script>
-function updateCountdown(targetDate, event) {
+function updatecountdown2(targetDate, event) {
   var currentDate = new Date();
   var diff = currentDate - targetDate;
 
@@ -10,11 +10,11 @@ function updateCountdown(targetDate, event) {
   var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  var countdownElement = document.getElementById("countdown");
-  countdownElement.innerHTML = "距离" + " <span style='color: red;'>" + event + "</span> " + "时候已经过去 " + days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒";
+  var countdown2Element = document.getElementById("countdown2");
+  countdown2Element.innerHTML = "距离" + " <span style='color: red;'>" + event + "</span> " + "时候已经过去 " + days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + seconds + " 秒";
 
   setTimeout(function() {
-    updateCountdown(targetDate, event);
+    updatecountdown2(targetDate, event);
   }, 1000);
 }
 
@@ -24,5 +24,5 @@ var targetDate = new Date(targetDateString);
 var event = "{{ .Params.event }}";
 
 // 调用倒计时更新函数
-updateCountdown(targetDate, event);
+updatecountdown2(targetDate, event);
 </script>
