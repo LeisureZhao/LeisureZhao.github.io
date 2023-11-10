@@ -1,28 +1,45 @@
-<div id="countdown"></div>
-
-<script>
-function updateCountdown(targetDate, event) {
-  var currentDate = new Date();
-  var diff = currentDate - targetDate;
-
-  var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-  var countdownElement = document.getElementById("countdown");
-  countdownElement.innerHTML = "距离" + event + "时间已经过去 " + days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒";
-
-  setTimeout(function() {
+<style>
+  #countdown {
+    font-family: "Arial", sans-serif; /* 使用 Arial 字体 */
+    color: #0000ff;  /* 设置字体颜色为蓝色 */
+    font-size: 20px;
+  }
+  
+  .event-text {
+    font-weight: bold; /* 设置事件文本为加粗 */
+    font-family: "Helvetica", sans-serif; /* 使用 Helvetica 字体 */
+    color: #ff0000; /* 设置事件文本的颜色为红色 */
+    text-transform: uppercase; /* 将事件文本转换为大写 */
+    font-size: 24px; /* 设置事件文本的字号为 24 像素 */
+  }
+  </style>
+  
+  <div id="countdown"></div>
+  
+  <script>
+  function updateCountdown(targetDate, event) {
+    var currentDate = new Date();
+    var diff = targetDate - currentDate;
+  
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  
+    var countdownElement = document.createElement("div");
+    countdownElement.innerHTML = '距离 <span class="event-text">' + event + '</span> 时间已经过去 ' + days + '天' + hours + '小时' + minutes + '分钟' + seconds + '秒';
+  
+    document.getElementById("countdown").appendChild(countdownElement);
+  }
+  
+  // 获取所有的倒计时元素
+  var countdownElements = document.querySelectorAll(".countdown");
+  
+  // 遍历每个倒计时元素，获取目标日期和事件，并调用倒计时更新函数
+  countdownElements.forEach(function(element) {
+    var targetDateString = element.getAttribute("data-target-date");
+    var targetDate = new Date(targetDateString);
+    var event = element.getAttribute("data-event");
     updateCountdown(targetDate, event);
-  }, 1000);
-}
-
-// 从页面参数获取目标日期和已经过去的时间
-var targetDateString = "{{ .Params.targetDate }}";
-var targetDate = new Date(targetDateString);
-var event = "{{ .Params.event }}";
-
-// 调用倒计时更新函数
-updateCountdown(targetDate, event);
-</script>
+  });
+  </script>
